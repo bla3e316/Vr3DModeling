@@ -59,14 +59,28 @@ export default class Vr3DModeling extends React.Component {
                         //texture: asset("death-star.png")
                     }}
                     style={{
-                        //transform: [{translate: [13, -15, -15]}]
                         transform: [
-                            {translate: [0.5, -0.5, -1]},
+                            {translate: [1, -1, -1.5]},
                             {rotateY: spin}
                         ]
                     }}
                     texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
                     wireframe={false}
+                />
+                <AnimatedModel
+                    source={{
+                        obj: asset('star-wars.obj'),
+                        //mtl: asset('death-star.mtl'),
+                        //texture: asset("death-star.png")
+                    }}
+                    style={{
+                        transform: [
+                            {translate: [-20, -10, -15]},
+                            {rotateY: spin}
+                        ]
+                    }}
+                    //texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
+                    wireframe={true}
                 />
             </View>
         );
