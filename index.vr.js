@@ -18,14 +18,28 @@ export default class Vr3DModeling extends React.Component {
     }
 
     componentDidMount() {
+        this.spinAnimation();
+
+        // Animated.timing(
+        //     this.state.spin,
+        //     {
+        //         toValue: 1,
+        //         duration: 20000,
+        //         easing: Easing.ease
+        //     }
+        // ).start();
+    }
+    spinAnimation() {
+        this.state.spin.setValue(0);
         Animated.timing(
             this.state.spin,
             {
                 toValue: 1,
-                duration: 5000,
-                easing: Easing.ease
+                duration: 12000,
+                easing: Easing.linear
             }
-        ).start();
+        ).start(() => this.spinAnimation());
+
     }
 
     render() {
@@ -38,7 +52,7 @@ export default class Vr3DModeling extends React.Component {
         return (
             <View>
                 <Pano source={asset('space.jpg')}/>
-                <Model
+                <AnimatedModel
                     source={{
                         obj: asset('death-star.obj'),
                         //mtl: asset('death-star.mtl'),
@@ -48,7 +62,7 @@ export default class Vr3DModeling extends React.Component {
                         //transform: [{translate: [13, -15, -15]}]
                         transform: [
                             {translate: [0.5, -0.5, -1]},
-                            {rotate: spin}
+                            {rotateY: spin}
                         ]
                     }}
                     texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
