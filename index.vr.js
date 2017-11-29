@@ -55,7 +55,7 @@ export default class Vr3DModeling extends React.Component {
                 <AnimatedModel
                     source={{
                         obj: asset('death-star.obj'),
-                        // mtl: asset('death-star.mtl'),
+                        mtl: asset('death-star.mtl'),
                     }}
                     style={{
                         transform: [
@@ -63,8 +63,6 @@ export default class Vr3DModeling extends React.Component {
                             {rotateY: spin}
                         ]
                     }}
-                    texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
-                    // texture={asset("death-star.png")}
                     wireframe={true}
                     lit={false}
                 />
@@ -80,7 +78,6 @@ export default class Vr3DModeling extends React.Component {
                             {rotateY: spin}
                         ]
                     }}
-                    texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
                     wireframe={true}
                     lit={false}
                 />
