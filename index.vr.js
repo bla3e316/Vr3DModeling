@@ -55,8 +55,7 @@ export default class Vr3DModeling extends React.Component {
                 <AnimatedModel
                     source={{
                         obj: asset('death-star.obj'),
-                        mtl: asset('death-star.mtl'),
-                        texture: asset("death-star.png")
+                        // mtl: asset('death-star.mtl'),
                     }}
                     style={{
                         transform: [
@@ -64,13 +63,15 @@ export default class Vr3DModeling extends React.Component {
                             {rotateY: spin}
                         ]
                     }}
-                    // texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
+                    texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
+                    // texture={asset("death-star.png")}
                     wireframe={true}
+                    lit={false}
                 />
                 <AnimatedModel
                     source={{
                         obj: asset('star-wars.obj'),
-                        //mtl: asset('death-star.mtl'),
+                        //mtl: asset('star-wars.mtl'),
                         //texture: asset("death-star.png")
                     }}
                     style={{
@@ -79,8 +80,9 @@ export default class Vr3DModeling extends React.Component {
                             {rotateY: spin}
                         ]
                     }}
-                    // texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
+                    texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
                     wireframe={true}
+                    lit={false}
                 />
             </View>
         );
