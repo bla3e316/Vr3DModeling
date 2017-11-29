@@ -64,7 +64,7 @@ export default class Vr3DModeling extends React.Component {
                             {rotateY: spin}
                         ]
                     }}
-                    {/* texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}*/}
+                    // texture={"https://s3-us-west-2.amazonaws.com/s.cdpn.io/827672/death-star.png"}
                     wireframe={true}
                 />
                 <AnimatedModel
