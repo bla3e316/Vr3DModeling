@@ -35,7 +35,7 @@ export default class Vr3DModeling extends React.Component {
             this.state.spin,
             {
                 toValue: 1,
-                duration: 12000,
+                duration: 24000,
                 easing: Easing.linear
             }
         ).start(() => this.spinAnimation());
@@ -54,23 +54,22 @@ export default class Vr3DModeling extends React.Component {
                 <Pano source={asset('space.jpg')}/>
                 <AnimatedModel
                     source={{
-                        obj: asset('death-star.obj'),
-                        mtl: asset('death-star.mtl'),
+                        obj: asset('star-wars-vader-tie-fighter.obj'),
+                        mtl: asset('star-wars-vader-tie-fighter.mtl'),
                     }}
                     style={{
                         transform: [
-                            {translate: [1, -1, -1.5]},
+                            {translate: [3, -3, -3]},
                             {rotateY: spin}
                         ]
                     }}
-                    wireframe={true}
+                    wireframe={false}
                     lit={false}
                 />
                 <AnimatedModel
                     source={{
-                        obj: asset('star-wars.obj'),
-                        //mtl: asset('star-wars.mtl'),
-                        //texture: asset("death-star.png")
+                        obj: asset('star-wars-arc-170-pbr.obj'),
+                        mtl: asset('star-wars-arc-170-pbr.mtl'),
                     }}
                     style={{
                         transform: [
@@ -78,7 +77,7 @@ export default class Vr3DModeling extends React.Component {
                             {rotateY: spin}
                         ]
                     }}
-                    wireframe={true}
+                    wireframe={false}
                     lit={false}
                 />
             </View>
