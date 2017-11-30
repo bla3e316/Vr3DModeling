@@ -54,12 +54,12 @@ export default class Vr3DModeling extends React.Component {
                 <Pano source={asset('space.jpg')}/>
                 <AnimatedModel
                     source={{
-                        obj: asset('star-wars-vader-tie-fighter.obj'),
-                        mtl: asset('star-wars-vader-tie-fighter.mtl'),
+                        obj: asset('starwars-tie-fighter.obj'),
+                        mtl: asset('starwars-tie-fighter.mtl'),
                     }}
                     style={{
                         transform: [
-                            {translate: [3, -3, -3]},
+                            {translate: [13, -5, -5]},
                             {rotateY: spin}
                         ]
                     }}
