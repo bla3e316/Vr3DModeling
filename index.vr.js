@@ -63,7 +63,7 @@ export default class Vr3DModeling extends React.Component {
                             {rotateY: spin}
                         ]
                     }}
-                    wireframe={false}
+                    wireframe={true}
                     lit={false}
                 />
                 <AnimatedModel
